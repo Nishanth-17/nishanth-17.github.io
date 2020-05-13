@@ -1,0 +1,117 @@
+* {box-sizing: border-box;}
+    
+    /* Set height of body and the document to 100% */
+    body, html {
+      overflow:auto;
+      height: 100%;
+      margin: 0;
+      font-family:  sans-serif;
+    }
+    
+    form{
+        display: block;
+        margin: 0 auto;
+    }
+    
+    /* Style tab links */
+    .tablink {
+      background-color: #555;
+      color: white;
+      float: left;
+      border: none;
+      cursor:pointer;
+      padding: 14px 16px;
+      font-size: 18px;
+      width: 25%;
+    }
+    
+    .tablink:hover {
+      background-color: #777;
+    }
+    
+    /* Style the tab content (and add height:100% for full page content) */
+    .tabcontent {
+      color: white;
+      display: none;
+      font-size: larger;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 100px 20px;
+      min-height: 100%;
+    }
+    
+    input[type=text],textarea {
+      width: 60%; /* Full width */
+      padding: 8px; /* Some padding */ 
+      border: 1px solid #ccc; /* Gray border */
+      border-radius: 4px; /* Rounded borders */
+      box-sizing: border-box; /* Make sure that padding  and width stays in place */
+      margin-top: 6px; /* Add a top margin */
+      margin-bottom: 14px; /* Bottom margin */
+      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    }
+
+    input[type=submit] {    
+      background-color: #444;
+      color: white;
+      padding: 15px 30px;
+      cursor: pointer;
+      border: 3px solid snow;
+    }
+
+    input[type=submit]:hover {
+        background-color: #2e2d2d;
+    }
+    
+    #Home {background-color:rgb(255, 183, 74);}
+    #Aboutme {background-color: rgb(177, 139, 212);}
+    #Contactme {background-color: rgb(235, 159, 149);}
+    #Gallery {background-color: rgb(105, 209, 216);}
+
+    .tabcontent .ailist li,
+    .tabcontent .hblist li{ font-style: italic;font-family:cursive;}
+
+    #Home img{
+        border: 4px solid cornsilk;
+        border-style:double;
+        justify-content: center;
+    }
+
+    .tabcontent h2{
+      text-align: center;
+    }
+
+    .tabcontent p{
+      font-size: large;
+    }
+
+   .tabcontent .images {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+            "image1 image2 image3 image7"
+            "image4 image5 image6 image7";
+        grid-row-gap:5px;
+    }
+
+    image1{
+        grid-area: image1;
+    }
+    image2{
+        grid-area: image2;
+    }
+    image3{
+        grid-area: image3;
+    }
+    image4{
+        grid-area: image4;
+    }
+    image5{
+        grid-area: image5;
+    }
+    image6{
+        grid-area: image6;
+    }
+    image7{
+        grid-area: image7;
+    }
