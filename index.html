@@ -1,171 +1,102 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    * {box-sizing: border-box}
-    
-    /* Set height of body and the document to 100% */
-    body, html {
-      height: 100%;
-      margin: 0;
-      font-family:  Arial;
-    }
-    
-    form{
-        display: block;
-        margin: 0 auto;
-    }
-    
-    /* Style tab links */
-    .tablink {
-      background-color: #555;
-      color: white;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      font-size: 18px;
-      width: 25%;
-    }
-    
-    .tablink:hover {
-      background-color: #777;
-    }
-    
-    /* Style the tab content (and add height:100% for full page content) */
-    .tabcontent {
-      color: white;
-      display: none;
-      font-size: larger;
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 100px 20px;
-      height: 100%;
-    }
-    
-    input[type=text],textarea {
-      width: 100%; /* Full width */
-      padding: 8px; /* Some padding */ 
-      border: 1px solid #ccc; /* Gray border */
-      border-radius: 4px; /* Rounded borders */
-      box-sizing: border-box; /* Make sure that padding and width stays in place */
-      margin-top: 6px; /* Add a top margin */
-      margin-bottom: 16px; /* Bottom margin */
-      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-    }
-    input[type=submit] {    
-      background-color: #444;
-      color: white;
-      padding: 12px 20px;
-      align-content: center;
-      border: 3px solid coral;
-      cursor: pointer;
-      justify-content: center;
-      text-align: center;
-      display: flex;
-    }
-    
-    #Home {background-color:rgb(255, 183, 74);}
-    #Aboutme {background-color: rgb(177, 139, 212);}
-    #Contactme {background-color: rgb(235, 159, 149);}
-    #Gallery {background-color: rgb(105, 209, 216);}
+  
+  <head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  
+  <body>
 
-
-    .tabcontent .ailist li,
-    .tabcontent .hblist li{ font-style: italic;font-family:cursive;}
-
-    .tabcontent img{
-        border: 4px solid cornsilk;
-        border-style:double;
-        justify-content: center;
-    
-    }
-    </style>
-    </head>
-<body>
-
-    <button class="tablink" onclick="openPage('Home', this)" id="defaultOpen">Home</button>
-    <button class="tablink" onclick="openPage('Aboutme', this)" >About Me</button>
-    <button class="tablink" onclick="openPage('Contactme', this)">Contact Me</button>
-    <button class="tablink" onclick="openPage('Gallery', this)">Gallery</button>
+    <button class = "tablink" onclick = "openPage('Home', this)" id = "defaultOpen">Home</button>
+    <button class = "tablink" onclick = "openPage('Aboutme', this)" >About Me</button>
+    <button class = "tablink" onclick = "openPage('Contactme', this)">Contact Me</button>
+    <button class = "tablink" onclick = "openPage('Gallery', this)">Gallery</button>
     
     <div id="Home" class="tabcontent">
-      <h3><strong>Welcome to My Personal Blog</strong></h3>
-    <p>My Name is <strong>Nishanth Badim</strong>.</p>
-      <p>I am in my 4th Year of Bachelors in Computer Science and Engineering. </p> 
-      <p>I try lo live my life better everyday. 
-          I would suggest you to <strong>LIVE YOUR LIFE</strong> to the fullest as you get to live it only once.</p>
-          <img src="/home/nishanth/Pictures/download.jpeg" alt="LOVE THE LIFE YOU LIVE, LIVE THE LIFE YOU LIVE" 
+      <h2><strong>Welcome to My Personal Blog</strong></h2>
+      <p>"Try lo live your life better everyday. <br>
+           <strong>LIVE YOUR LIFE</strong> to the fullest as you get to live it only once."</p>
+          <img src = "download.jpeg" alt = "LOVE THE LIFE YOU LIVE, LIVE THE LIFE YOU LIVE" 
           style="float:none;width:400px;height:250px;">
     </div>
     
-    <div id="Aboutme" class="tabcontent">
+    <div id = "Aboutme" class = "tabcontent">
+    <p>Hi! I'm <strong>Nishanth Badim</strong>.</p>
+    <br> 
       <h4><strong>MY PROFESSION</strong></h4>
       <p>I am working as an Intern at <strong>Zemoso Technologies</strong> from 3 months.   
       I previously worked at Opentext as an Intern for a period of 5 months.</p>
       <br>
       <h4><strong>AREAS OF INTEREST</strong></h4>
-      <ul class="ailist">
+      <ul class = "ailist">
           <li>Web Development</li>
           <li>Data Science</li>
           <li>Artificial Intelligence</li>
       </ul>
       <br>
       <h4><strong>HOBBIES</strong></h4>
-      <ul class="hblist"> 
+      <ul class = "hblist"> 
           <li>Playing PC Games</li>
           <li>Reading Motivational Books</li>
           <li>Browsing latest Tech</li>          
       </ul>
     </div>
     
-    <div id="Contactme" class="tabcontent">
+    <div id = "Contactme" class = "tabcontent">
       <h5>Get in touch, or swing by for a cup of coffee by filling up this form.</h5>
-      <form action="">
-          <label for="fullname">Name</label><br>
-          <input type="text" name="fullname" placeholder="Please type your Full Name" size="50">
+      <form name = "contactForm" method = "POST" action = "#" onsubmit = "return validateContactForm()">
+          <label for = "fullname">Name</label><br>
+          <input type = "text" id = "fullname" placeholder = "Please type your Full Name" size = "50" required>
           <br>
-          <label for="email">Email ID</label><br>
-          <input type="text" name="email" placeholder="Please type your Mail Id" size="50">
+          <label for = "email">Email ID</label><br>
+          <input type = "text" id = "email" placeholder = "Please type your Mail Id" size = "50" required>
           <br>
-          <label for="mobile">Contact Number</label><br>
-          <input type="text" name="mobile" placeholder="Please provide your contact" size="50">
+          <label for = "mobile">Contact Number</label><br>
+          <input type = "text" id = "mobile" placeholder = "Please provide your contact" size = "50" required>
           <br>
-          <label for="message">Message</label><br>
-          <textarea id="message" rows="6" cols="50" placeholder="Type-in your message, if any...."></textarea>
+          <label for = "message">Message</label><br>
+          <textarea id = "message" rows = "6" placeholder = "Type-in your message, if any...."></textarea>
           <br>
-          <input type="submit" value="Submit">
+          <input type = "submit" value = "Submit">
       </form>
     </div>
-    
-    <div id="Gallery" class="tabcontent">
-      <h3>About</h3>
-      <p>Who we are and what we do.</p>
+
+    <div id = "Gallery" class = "tabcontent">
+      <h3>Here are a few pictures</h3>
+      <div class = "images">
+        <image1>
+          <img src = "download.jpeg">
+        </image1>
+        <image2>
+          <img src = "download.jpeg">
+        </image2>
+        <image3>
+          <img src = "download.jpeg">
+        </image3>
+        <image4>
+          <img src = "download.jpeg">
+        </image4>
+        <image5>
+          <img src = "download.jpeg">
+        </image5> 
+        <image6>
+          <img src = "download.jpeg">
+        </image6> 
+        <image7>
+          <img src = "download.jpeg">
+        </image7>
+        <image8>
+          <img src = "download.jpeg">
+        </image8>
+      </div>
     </div>
 
-
-
-
-
-<script>
-function openPage(pageName,elmnt) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = "#444";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+    <script>
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
    
-</body>
+  </body>
 </html> 
