@@ -2,8 +2,10 @@
 <html>
   
   <head>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   
@@ -13,13 +15,16 @@
     <button class = "tablink" onclick = "openPage('Aboutme', this)" >About Me</button>
     <button class = "tablink" onclick = "openPage('Contactme', this)">Contact Me</button>
     <button class = "tablink" onclick = "openPage('Gallery', this)">Gallery</button>
+    <button class = "tablink" onclick = "openPage('GalleryAdmin', this)">Gallery Admin</button>
     
     <div id="Home" class="tabcontent">
-      <h2><strong>Welcome to My Personal Blog</strong></h2>
-      <p>"Try lo live your life better everyday. <br>
-           <strong>LIVE YOUR LIFE</strong> to the fullest as you get to live it only once."</p>
+      <h2><strong>Welcome to My Personal Blog</strong></h2><br>
+      <em><p>"The best remedy for those who are afraid, lonely or unhappy is to go outside,</p>
+         <p>somewhere where they can be quiet, alone with the heavens, nature and God.</p>
+          <p>As long as this exists, and it certainly always will, then there will be comfort for 
+          every sorrow,</p><p> whatever the circumstances may be." </em>-Anne Frank</p>
           <img src = "download.jpeg" alt = "LOVE THE LIFE YOU LIVE, LIVE THE LIFE YOU LIVE" 
-          style="float:none;width:400px;height:250px;">
+          style="float:right;width:400px;height:250px;">
     </div>
     
     <div id = "Aboutme" class = "tabcontent">
@@ -45,26 +50,26 @@
     </div>
     
     <div id = "Contactme" class = "tabcontent">
-      <h5>Get in touch, or swing by for a cup of coffee by filling up this form.</h5>
+      <h5>Get in touch, or swing by for a cup of coffee by filling up this form.</h5><br>
       <form name = "contactForm" method = "POST" action = "#" onsubmit = "return validateContactForm()">
           <label for = "fullname">Name</label><br>
-          <input type = "text" id = "fullname" placeholder = "Please type your Full Name" size = "50" required>
+          <input type = "text" id = "fullname" placeholder = "Please type your Full Name"  required>
           <br>
           <label for = "email">Email ID</label><br>
-          <input type = "text" id = "email" placeholder = "Please type your Mail Id" size = "50" required>
+          <input type = "text" id = "email" placeholder = "Please type your Mail Id" required>
           <br>
           <label for = "mobile">Contact Number</label><br>
-          <input type = "text" id = "mobile" placeholder = "Please provide your contact" size = "50" required>
+          <input type = "text" id = "mobile" placeholder = "Please provide your contact" required>
           <br>
           <label for = "message">Message</label><br>
-          <textarea id = "message" rows = "6" placeholder = "Type-in your message, if any...."></textarea>
-          <br>
+          <textarea id = "message" rows = "4" placeholder = "Type-in your message, if any...."></textarea>
+          <br><br>
           <input type = "submit" value = "Submit">
       </form>
     </div>
 
     <div id = "Gallery" class = "tabcontent">
-      <h3>Here are a few pictures</h3>
+      <h3>Here are a few pictures</h3><br>
       <div class = "images">
         <image1>
           <img src = "download.jpeg">
@@ -89,6 +94,29 @@
         </image7>
       </div>
     </div>
+
+
+    <div id="GalleryAdmin" class="tabcontent">
+    
+    <p id="addButton"></p>
+    <div id="showData" class="admin"></div>
+    <div class="container">
+
+    <form name= "imageForm" id="imageForm" action="#" method="POST" style="display: none;" onsubmit="return validateImageForm()">
+      
+    <h2 style="float: left;">Enter Image Details</h2><br><br>  
+      <input type="hidden" value=""/>
+        <input type="text" id="Name" name="Name" class="form-control mb-4 col-4" placeholder="Name" required>
+        <input type="text" id="Information"name="Information" class="form-control mb-4 col-4" placeholder="Information" required>
+        <input type="date" id="Upload" name="Upload" class="form-control mb-4 col-4" placeholder="Uploaded Date" required>
+        <input type="text" id="Image" name="Image" class="form-control mb-4 col-4" placeholder="Image URL" required>
+        <button type="submit" id="submit" class="btn btn-success col-2">Submit</button>
+        <button type="reset" id="reset" style="display: none;">Reset form</button>
+    </form>
+    </div>
+    </div>
+</html>
+  
 
     <script>
       // Get the element with id="defaultOpen" and click on it
