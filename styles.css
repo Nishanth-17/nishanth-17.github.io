@@ -91,17 +91,10 @@
         grid-template-columns: auto auto auto auto;
         grid-template-rows: auto auto;
         grid-template-areas: 
-<<<<<<< HEAD
             "image1 image2 image3 image7"
             "image4 image5 image6 image7";
         grid-row-gap:4px;
 
-=======
-            "image1 image2 image3 image7" 
-            "image4 image5 image6 image8";
-        grid-row-gap:3px;
-        
->>>>>>> c234155cf2f2784af2035d3c3c93a0e4b31cf405
     }
 
     image1{
@@ -126,7 +119,6 @@
       grid-area: image7;
     }
 
-<<<<<<< HEAD
 .admin{
 display:grid;
 grid-template-columns: 1fr 1fr 1fr;
@@ -144,9 +136,3 @@ img{
     width: 300px;
     height: 200px;
 }
-=======
-    image8{
-      grid-area: image8;
-    }
-
->>>>>>> c234155cf2f2784af2035d3c3c93a0e4b31cf405
