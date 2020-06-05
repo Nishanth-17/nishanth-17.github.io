@@ -2,21 +2,21 @@
         "id" : 0,
         "Name":"Golden Retriever White",
         "Information" : "It is a special dog breed",
-        "upload" : "2020-06-02",
+        "Upload" : "2020-06-02",
         "Image":"https://i.ytimg.com/vi/2EfHtzauHcM/maxresdefault.jpg"
     },
     {
         "id" : 1,
         "Name":"Puppy",
         "Information" : "It is a special dog breed",
-        "upload" : "2020-05-25",
+        "Upload" : "2020-05-25",
         "Image":"https://hips.hearstapps.com/countryliving.cdnds.net/17/47/1511194376-cavachon-puppy-christmas.jpg"
     },
     {
         "id" : 2,
         "Name":"Golden Retriever",
         "Information" : "It is a special dog breed",
-        "upload" : "2020-05-26",
+        "Upload" : "2020-05-26",
         "Image":"https://i.ytimg.com/vi/a6KGPBflhiM/hqdefault.jpg"
     }
 ]
