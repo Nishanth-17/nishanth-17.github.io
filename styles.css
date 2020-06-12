@@ -33,7 +33,7 @@
     .tabcontent {
       color: white;
       display: none;
-      font-size: medium;
+      font-size: 18px;
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       padding: 100px 20px;
       min-height: 100%;
@@ -43,6 +43,7 @@
       justify-content: center;
       width: 50%; 
       padding: 8px;  
+      background-color: rgb(255, 229, 189);
       border: 1px solid #ccc; /* Gray border */
       border-radius: 4px; /* Rounded borders */
       box-sizing: border-box; /* Make sure that padding  and width stays in place */
@@ -64,13 +65,13 @@
     }
     
     #Home {background-color:rgb(255, 183, 74);}
-    #Aboutme {background-color: rgb(255, 183, 74);}
-    #Contactme {background-color: rgb(255, 183, 74);}
+    #Aboutme {background-color: rgb(245, 170, 59);}
+    #Contactme {background-color: rgb(245, 170, 59);}
     #Gallery {background-color: rgb(105, 209, 216);}
     #GalleryAdmin {background-color: rgb(105, 209, 216);}
 
     .tabcontent .ailist li,
-    .tabcontent .hblist li{ font-style: italic;font-family:cursive;}
+    .tabcontent .hblist li{ font-style: italic;font-family:cursive;font-size: 22px;}
 
     #Home img{
         border: 4px solid cornsilk;
@@ -83,17 +84,17 @@
     }
 
     .tabcontent p{
-      font-size: large;
+      font-size: larger;
     }
 
    .tabcontent .images {
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: 2fr 2fr 1fr;
         grid-template-rows: auto auto;
         grid-template-areas: 
-            "image1 image2 image3 image7"
-            "image4 image5 image6 image7";
-        grid-row-gap:4px;
+            "image1 image2 image3"
+            "image4 image5 image6";
+        grid-row-gap:50px;
 
     }
 
@@ -115,14 +116,11 @@
     image6{
       grid-area: image6;
     }
-    image7{
-      grid-area: image7;
-    }
 
 .admin{
 display:grid;
 grid-template-columns: 1fr 1fr 1fr;
-grid-gap: 1px;
+grid-gap: 3px;
 }
 .admin .imagebox{
     max-height: 289;
